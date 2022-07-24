@@ -2,3 +2,9 @@
 <%# <h1>Rantelier</h1> %>
 <p>Homepage - here goes the index view of posts</p>
 <%= render "shared/footer" %>
+<% tags = ["art", "inspiration", "notes", "projects", "todigital"] %>
+<% tags.each do |tag| %>
+<div>
+<%= link_to "#{tag.capitalize}", about_path(field: tag) %>
+</div>
+<% end %>
