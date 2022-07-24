@@ -5,6 +5,6 @@
 <% tags = ["art", "inspiration", "notes", "projects", "todigital"] %>
 <% tags.each do |tag| %>
 <div>
-<%= link_to "#{tag.capitalize}", about_path(field: tag) %>
+<%= link_to "#{tag.capitalize}", about_path(tag: tag) %>
 </div>
 <% end %>

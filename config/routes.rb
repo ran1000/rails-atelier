@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :posts
 
-  get 'about/:field', to: 'pages#about', as: :about
+  get 'about/:tag', to: 'pages#about', as: :about
 
   # Defines the root path route ("/")
   # root "articles#index"
