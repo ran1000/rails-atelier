@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px;
+  margin: 3px;
 
   & h1 {
     font-size: 1.6rem;
@@ -19,7 +20,11 @@
   margin: 0px 0px;
 }
 
-.navbar-atelier-sections p {
+.navbar-atelier-sections a {
   text-decoration: none;
+  color: black;
+}
+
+.navbar-atelier-sections p {
   margin: 0px 0px 0px 15px;
 }

@@ -1,0 +1,23 @@
+.footer-atelier {
+  height: 50px;
+  border: 2px solid black;
+  padding: 0px 10px;
+  margin: 3px;
+}
+
+.footer-atelier-sections {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 0px 0px 15px;
+}
+
+.footer-atelier-sections a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-atelier-sections p {
+  margin: 0px 0px 0px 15px;
+}
