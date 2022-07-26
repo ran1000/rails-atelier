@@ -1,12 +1,25 @@
-.navbar-lewagon {
+.navbar-atelier {
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  padding: 0px 10px;
+
+  & h1 {
+    font-size: 1.6rem;
+    margin: 0px 0px;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-atelier-sections {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 0px 0px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-atelier-sections p {
+  text-decoration: none;
+  margin: 0px 0px 0px 15px;
 }
