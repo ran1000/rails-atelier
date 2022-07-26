@@ -1,8 +1,11 @@
-<h1>Index</h1>
+<%= render "shared/navbar" %>
+<%= render "shared/footer" %>
 <% @posts.each do |post| %>
-  <h1><%= post.title %></h1>
-  <p><%= post.text %></p>
-  <% if post.images %>
-   <img src=<%= post.images %> style="width: 300px">
-  <% end %>
+  <%= render "shared/card", post: post %>
+<% end %>
+<% tags = ["art", "inspiration", "notes", "projects", "todigital"] %>
+<% tags.each do |tag| %>
+<div>
+<%= link_to "#{tag.capitalize}", about_path(tag: tag) %>
+</div>
 <% end %>
