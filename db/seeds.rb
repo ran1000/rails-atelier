@@ -1,6 +1,8 @@
 unless Post.first && Category.first && PostsCategory.first
   # Posts Seeds
+  puts "--------------------"
   puts "Creating posts..."
+  puts "--------------------"
   posts = []
   posts << creative_coding01_post = { title: "Creative Coding", text: "", images: "app/assets/images/creativecoding_01.png" }
   posts << norberg01_post = { title: "Norberg Mimerlaven", text: "", images: "app/assets/images/norberg_01.jpg" }
@@ -19,7 +21,7 @@ unless Post.first && Category.first && PostsCategory.first
     post = Post.create!(attributes)
     puts "Created #{post.title.downcase} post."
   end
-
+  puts "--------------------"
   # Categories Seeds
   puts "Creating categories..."
   categories = []
@@ -35,28 +37,42 @@ unless Post.first && Category.first && PostsCategory.first
     category = Category.create!(attributes)
     puts "Created #{category.tag.downcase} category."
   end
-
+  puts "--------------------"
   # Posts-Categories Seeds
   puts "Creating posts-categories ..."
   posts_categories = []
-  posts_categories << joined_table01 = { post_id: creative_coding01_post.id, category_id: creative_coding_category.id }
-  posts_categories << joined_table02 = { post_id: norberg01_post.id, category_id: places_category.id }
-  posts_categories << joined_table03 = { post_id: writing01_post.id, category_id: notes_category.id }
-  posts_categories << joined_table04 = { post_id: norberg02_post.id, category_id: places_category.id }
-  posts_categories << joined_table05 = { post_id: project01_post.id, category_id: projects_category.id }
-  posts_categories << joined_table06 = { post_id: facade01_post.id, category_id: facades_category.id }
-  posts_categories << joined_table07 = { post_id: computer_poetry01_post.id, category_id: inspirations_category.id }
-  posts_categories << joined_table08 = { post_id: concept01_post.id, category_id: concepts_category.id }
-  posts_categories << joined_table09 = { post_id: corner01_post.id, category_id: inspirations_category.id }
-  posts_categories << joined_table10 = { post_id: corner01_post.id, category_id: places_category.id }
-  posts_categories << joined_table11 = { post_id: creative_coding01_post.id, category_id: projects_category.id }
-  posts_categories << joined_table12 = { post_id: norberg02_post.id, category_id: inspirations_category.id }
-  posts_categories << joined_table13 = { post_id: norberg01_post.id, category_id: facades_category.id }
-  posts_categories << joined_table14 = { post_id: to_digital01_post.id, category_id: to_digital_category.id }
+  posts_categories << joined_table01 = { post_id: Post.find_by(title: "Creative Coding").id,
+                                         category_id: Category.find_by(tag: "Creative Coding").id }
+  posts_categories << joined_table02 = { post_id: Post.find_by(title: "Norberg Mimerlaven").id,
+                                         category_id: Category.find_by(tag: "Places").id }
+  posts_categories << joined_table03 = { post_id: Post.find_by(title: "Writing Act #01").id,
+                                         category_id: Category.find_by(tag: "Notes").id }
+  posts_categories << joined_table04 = { post_id: Post.find_by(title: "Raw and lights").id,
+                                         category_id: Category.find_by(tag: "Places").id }
+  posts_categories << joined_table05 = { post_id: Post.find_by(title: "Spotaloo").id,
+                                         category_id: Category.find_by(tag: "Projects").id }
+  posts_categories << joined_table06 = { post_id: Post.find_by(title: "Stockholm Port").id,
+                                         category_id: Category.find_by(tag: "Façades").id }
+  posts_categories << joined_table07 = { post_id: Post.find_by(title: "Random Poetry #99").id,
+                                         category_id: Category.find_by(tag: "Inspirations").id }
+  posts_categories << joined_table08 = { post_id: Post.find_by(title: "Open Ready Process").id,
+                                         category_id: Category.find_by(tag: "Concepts").id }
+  posts_categories << joined_table09 = { post_id: Post.find_by(title: "Night Corner").id,
+                                         category_id: Category.find_by(tag: "Inspirations").id }
+  posts_categories << joined_table10 = { post_id: Post.find_by(title: "Night Corner").id,
+                                         category_id: Category.find_by(tag: "Places").id }
+  posts_categories << joined_table11 = { post_id: Post.find_by(title: "Creative Coding").id,
+                                         category_id: Category.find_by(tag: "Projects").id }
+  posts_categories << joined_table12 = { post_id: Post.find_by(title: "Raw and lights").id,
+                                         category_id: Category.find_by(tag: "Inspirations").id }
+  posts_categories << joined_table13 = { post_id: Post.find_by(title: "Norberg Mimerlaven").id,
+                                         category_id: Category.find_by(tag: "Façades").id }
+  posts_categories << joined_table14 = { post_id: Post.find_by(title: "Steel Can Button").id,
+                                         category_id: Category.find_by(tag: "Analog To Digital").id }
   posts_categories.each do |attributes|
     joined_table = PostsCategory.create!(attributes)
     puts "Created reference between #{joined_table.post.title} and #{joined_table.category.tag}."
   end
-
+  puts "--------------------"
   puts "Seeding done!"
 end
