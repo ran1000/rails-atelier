@@ -14,6 +14,7 @@ unless Post.first && Category.first && PostsCategory.first
   posts << computer_poetry01_post = { title: "Random Poetry #99", text: "", images: "app/assets/images/poetry_01.png" }
   posts << concept01_post = { title: "Open Ready Process", text: "", images: "app/assets/images/concept_01.jpg" }
   posts << corner01_post = { title: "Night Corner", text: "", images: "app/assets/images/corner_01.jpg" }
+  posts << to_digital01_post = { title: "Steel Can Button", text: "", images: "app/assets/images/todigital_01.jpeg" }
   posts.each do |attributes|
     post = Post.create!(attributes)
     puts "Created #{post.title.downcase} post."
@@ -29,6 +30,7 @@ unless Post.first && Category.first && PostsCategory.first
   categories << projects_category = { tag: "Projects" }
   categories << inspirations_category = { tag: "Inspirations" }
   categories << concepts_category = { tag: "Concepts" }
+  categories << to_digital_category = { tag: "Analog To Digital" }
   categories.each do |attributes|
     category = Category.create!(attributes)
     puts "Created #{category.tag.downcase} category."
@@ -50,6 +52,7 @@ unless Post.first && Category.first && PostsCategory.first
   posts_categories << joined_table11 = { post_id: creative_coding01_post.id, category_id: projects_category.id }
   posts_categories << joined_table12 = { post_id: norberg02_post.id, category_id: inspirations_category.id }
   posts_categories << joined_table13 = { post_id: norberg01_post.id, category_id: facades_category.id }
+  posts_categories << joined_table14 = { post_id: to_digital01_post.id, category_id: to_digital_category.id }
   posts_categories.each do |attributes|
     joined_table = PostsCategory.create!(attributes)
     puts "Created reference between #{joined_table.post.title} and #{joined_table.category.tag}."
