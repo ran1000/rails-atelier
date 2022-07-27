@@ -1,8 +1,12 @@
 <%= render "shared/navbar" %>
 <%= render "shared/footer" %>
-<% @posts.each do |post| %>
-  <%= render "shared/card", post: post %>
-<% end %>
+<div class="content">
+  <div class="content-grid">
+    <% @posts.each do |post| %>
+      <%= render "shared/card", post: post %>
+    <% end %>
+  </div>
+</div>
 <% tags = ["art", "inspiration", "notes", "projects", "todigital"] %>
 <% tags.each do |tag| %>
 <div>
