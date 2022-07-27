@@ -36,9 +36,21 @@ unless Post.first && Category.first && PostsCategory.first
 
   # Posts-Categories Seeds
   puts "Creating posts-categories ..."
-  joined_table01 = { post_id: norberg01_post.id, category_id: places_category.id }
-  joined_table02 = { post_id: writing01_post.id, category_id: notes_category.id }
-  [joined_table01, joined_table02].each do |attributes|
+  posts_categories = []
+  posts_categories << joined_table01 = { post_id: creative_coding01_post.id, category_id: creative_coding_category.id }
+  posts_categories << joined_table02 = { post_id: norberg01_post.id, category_id: places_category.id }
+  posts_categories << joined_table03 = { post_id: writing01_post.id, category_id: notes_category.id }
+  posts_categories << joined_table04 = { post_id: norberg02_post.id, category_id: places_category.id }
+  posts_categories << joined_table05 = { post_id: project01_post.id, category_id: projects_category.id }
+  posts_categories << joined_table06 = { post_id: facade01_post.id, category_id: facades_category.id }
+  posts_categories << joined_table07 = { post_id: computer_poetry01_post.id, category_id: inspirations_category.id }
+  posts_categories << joined_table08 = { post_id: concept01_post.id, category_id: concepts_category.id }
+  posts_categories << joined_table09 = { post_id: corner01_post.id, category_id: inspirations_category.id }
+  posts_categories << joined_table10 = { post_id: corner01_post.id, category_id: places_category.id }
+  posts_categories << joined_table11 = { post_id: creative_coding01_post.id, category_id: projects_category.id }
+  posts_categories << joined_table12 = { post_id: norberg02_post.id, category_id: inspirations_category.id }
+  posts_categories << joined_table13 = { post_id: norberg01_post.id, category_id: facades_category.id }
+  posts_categories.each do |attributes|
     joined_table = PostsCategory.create!(attributes)
     puts "Created reference between #{joined_table.post.title} and #{joined_table.category.tag}."
   end
