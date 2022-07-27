@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-# movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-# Character.create(name: "Luke", movie: movies.first)
 unless Post.first && Category.first && PostsCategory.first
   # Posts Seeds
   puts "Creating posts..."
@@ -12,7 +5,7 @@ unless Post.first && Category.first && PostsCategory.first
   writing01_post = { title: "WritingAct01", text: "Lorem Ipsum" }
   [norberg01_post, writing01_post].each do |attributes|
     post = Post.create!(attributes)
-    puts "Created #{post.title.downcase} post"
+    puts "Created #{post.title.downcase} post."
   end
 
   # Categories Seeds
@@ -21,15 +14,17 @@ unless Post.first && Category.first && PostsCategory.first
   notes_category = { tag: "Notes" }
   [places_category, notes_category].each do |attributes|
     category = Category.create!(attributes)
-    puts "Created #{category.tag.downcase} category"
+    puts "Created #{category.tag.downcase} category."
   end
 
-  # Posts-Categories
+  # Posts-Categories Seeds
   puts "Creating posts-categories ..."
-  joined_table01 = PostsCategory.new(post_id: norberg01_post.id, category_id: places_category.id)
-  joined_table01.save!
-  joined_table02 = PostsCategory.new(post_id: writing01_post.id, category_id: notes_category.id)
-  joined_table02.save!
+  joined_table01 = { post_id: norberg01_post.id, category_id: places_category.id }
+  joined_table02 = { post_id: writing01_post.id, category_id: notes_category.id }
+  [joined_table01, joined_table02].each do |attributes|
+    joined_table = PostsCategory.create!(attributes)
+    puts "Created reference between #{joined_table.post.title} and #{joined_table.category.tag}."
+  end
 
   puts "Seeding done!"
 end
