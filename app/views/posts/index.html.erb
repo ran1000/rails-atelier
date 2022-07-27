@@ -7,9 +7,11 @@
     <% end %>
   </div>
 </div>
-<% tags = ["art", "inspiration", "notes", "projects", "todigital"] %>
-<% tags.each do |tag| %>
-<div>
-<%= link_to "#{tag.capitalize}", about_path(tag: tag) %>
+<div class="categories-bar">
+  <% categories = Category.all %>
+  <% categories.each do |category| %>
+    <div class="categories-bar-tag">
+      <%= link_to "#{category.tag.capitalize}", about_path(params[:tag] = category.id) %>
+    </div>
+  <% end %>
 </div>
-<% end %>

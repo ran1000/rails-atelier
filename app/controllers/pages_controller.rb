@@ -3,9 +3,10 @@ class PagesController < ApplicationController
   end
 
   def about
-    tags = ["art", "inspiration", "notes", "projects", "todigital"]
-    if tags.include?(params[:tag])
-      params[:tag] = params[:tag]
+    @category = Category.find(params[:tag])
+    @categories = Category.all
+    if @categories.include?(@category)
+      params[:tag] = @category.tag
     else
       params[:tag] = "Tag not included"
     end
