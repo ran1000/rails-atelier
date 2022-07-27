@@ -8,10 +8,12 @@
 unless Post.first
   # Posts Seeds
   puts "Creating posts..."
-  norberg01_post = Post.new(title: "Norberg01", text: "Norberg 2022", images: "https://images.unsplash.com/photo-1514272272587-d4fae170976f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=974&q=80")
-  norberg01_post.save!
-  writing01_post = Post.new(title: "WritingAct01", text: "Lorem Ipsum")
-  writing01_post.save!
+  norberg01_post = { title: "Norberg01", text: "Norberg 2022", images: "https://images.unsplash.com/photo-1514272272587-d4fae170976f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=974&q=80" }
+  writing01_post = { title: "WritingAct01", text: "Lorem Ipsum" }
+  [norberg01_post, writing01_post].each do |attributes|
+    post = Post.create!(attributes)
+    puts "Created #{post.name}"
+  end
 
   # Categories Seeds
   puts "Creating categories..."
