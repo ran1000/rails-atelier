@@ -1,9 +1,20 @@
 unless Post.first && Category.first && PostsCategory.first
   # Posts Seeds
   puts "Creating posts..."
-  norberg01_post = { title: "Norberg01", text: "Norberg 2022", images: "https://images.unsplash.com/photo-1514272272587-d4fae170976f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=974&q=80" }
-  writing01_post = { title: "WritingAct01", text: "Lorem Ipsum" }
-  [norberg01_post, writing01_post].each do |attributes|
+  posts = []
+  posts << creative_coding01_post = { title: "Creative Coding", text: "", images: "app/assets/images/creativecoding_01.png" }
+  posts << norberg01_post = { title: "Norberg Mimerlaven", text: "", images: "app/assets/images/norberg_01.jpg" }
+  posts << writing01_post = { title: "Writing Act #01", text: "Establishing a connection of the real world with the
+    digital environment. Reproducing things, bringing them through the fence, realising new virtual spaces.
+    Contaminating ideas. Not making, just seeing the distances between what’s there and what can never be there.",
+     images: "" }
+  posts << norberg02_post = { title: "Raw and lights", text: "", images: "app/assets/images/norberg_02.jpg" }
+  posts << project01_post = { title: "Spotaloo", text: "", images: "" }
+  posts << facade01_post = { title: "Stockholm Port", text: "", images: "app/assets/images/stockholm_01.jpg" }
+  posts << computer_poetry01_post = { title: "Random Poetry #99", text: "", images: "app/assets/images/poetry_01.png" }
+  posts << concept01_post = { title: "Open Ready Process", text: "", images: "app/assets/images/concept_01.jpg" }
+  posts << corner01_post = { title: "Night Corner", text: "", images: "app/assets/images/corner_01.jpg" }
+  posts.each do |attributes|
     post = Post.create!(attributes)
     puts "Created #{post.title.downcase} post."
   end
