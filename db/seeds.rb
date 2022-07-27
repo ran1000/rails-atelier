@@ -10,9 +10,15 @@ unless Post.first && Category.first && PostsCategory.first
 
   # Categories Seeds
   puts "Creating categories..."
-  places_category = { tag: "Places"}
-  notes_category = { tag: "Notes" }
-  [places_category, notes_category].each do |attributes|
+  categories = []
+  categories << creative_coding_category = { tag: "Creative Coding" }
+  categories << places_category = { tag: "Places" }
+  categories << notes_category = { tag: "Notes" }
+  categories << facades_category = { tag: "Façades" }
+  categories << projects_category = { tag: "Projects" }
+  categories << inspirations_category = { tag: "Inspirations" }
+  categories << concepts_category = { tag: "Concepts" }
+  categories.each do |attributes|
     category = Category.create!(attributes)
     puts "Created #{category.tag.downcase} category."
   end
