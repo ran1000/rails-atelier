@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   # get 'posts/new'
   # get 'posts/edit'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :posts, only: [:index]
+  resources :posts, only: [:index] do
+    collection do
+      get :category
+    end
+  end
   get 'about/:tag', to: 'pages#about', as: :about
 
   # Defines the root path route ("/")

@@ -16,7 +16,7 @@ unless Post.first && Category.first && PostsCategory.first
   posts << computer_poetry01_post = { title: "Random Poetry #99", text: "", images: "poetry_01.png" }
   posts << concept01_post = { title: "Open Ready Process", text: "", images: "concept_01.jpg" }
   posts << corner01_post = { title: "Night Corner", text: "", images: "corner_01.jpg" }
-  posts << to_digital01_post = { title: "Steel Can Button", text: "", images: "todigital_01.jpeg" }
+  posts << to_digital01_post = { title: "Steel Can Button", text: "", images: "todigital_01.jpg" }
   posts.each do |attributes|
     post = Post.create!(attributes)
     puts "Created #{post.title.downcase} post."
