@@ -3,7 +3,7 @@
     <h1><%= post.title %></h1>
     <p><%= post.text %></p>
     <% if post.images %>
-     <img src=<%= post.images %> style="width: 300px">
+      <%=image_tag post.images, { class: "post-card-image" } %>
     <% end %>
   </div>
 </div>
