@@ -1,7 +1,7 @@
 puts "Cleaning database..."
 PostsCategory.destroy_all
 Category.destroy_all
-Posts.destroy_all
+Post.destroy_all
 # Posts Seeds
 puts "--------------------"
 puts "Creating posts..."
