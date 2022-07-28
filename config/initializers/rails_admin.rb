@@ -1,6 +1,12 @@
 RailsAdmin.config do |config|
   config.asset_source = :sprockets
 
+  config.model 'Category' do
+    object_label_method do
+      :tag
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==

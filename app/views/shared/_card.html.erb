@@ -3,7 +3,7 @@
     <h1><%= post.title %></h1>
     <p><%= post.text %></p>
     <% if post.images %>
-      <%=image_tag post.images, { class: "post-card-image" } %>
+      <%= image_tag post.images, { class: "post-card-image" } %>
     <% end %>
   </div>
 </div>
