@@ -2,8 +2,8 @@
   <div class="post-card">
     <h1><%= post.title %></h1>
     <p><%= post.text %></p>
-    <% if post.images %>
-      <%= image_tag post.images, { class: "post-card-image" } %>
+    <% if post.photos.attached? %>
+      <%= cl_image_tag(post.photos[0].key , width: 400, height: 600, crop: :fill) %>
     <% end %>
   </div>
 </div>
