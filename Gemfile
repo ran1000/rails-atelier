@@ -77,3 +77,5 @@ group :test do
 end
 
 gem "rails_admin", "~> 3.0.0"
+
+gem "cloudinary"
