@@ -4,7 +4,7 @@
   <% categories = Category.all %>
   <% categories.each do |category| %>
     <div class="categories-bar-tag">
-      <%= link_to "#{category.tag.capitalize}", about_path(params[:tag] = category.id) %>
+      <%= link_to "##{category.tag.downcase}", about_path(params[:tag] = category.id) %>
     </div>
   <% end %>
 </div>

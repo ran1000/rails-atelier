@@ -10,8 +10,15 @@
 }
 
 .categories-bar-tag {
-  width: 100px;
-  margin: 0px 0px;
+  border: $border-size solid $atelier-color-01;
+  padding: 2px 4px;
+
+  a {
+    color: $atelier-color-01;
+    font-family: $body-font;
+    font-size: $badge-size;
+    text-decoration: none;
+  }
 }
 
 // .navbar-atelier-sections a {
