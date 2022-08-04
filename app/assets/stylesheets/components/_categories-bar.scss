@@ -3,15 +3,27 @@
   border: $border-size solid black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0px 10px;
   margin: $margin-size;
 }
 
-.categories-bar-tag {
+.categories-badge {
+  background-color: white;
+
+  :hover {
+    background-color: rgb(249, 255, 168);
+  }
+
+  :active {
+    background-color: $atelier-color-01;
+    color: white;
+  }
+
   border: $border-size solid $atelier-color-01;
   padding: 2px 4px;
+  margin-right: $margin-size;
 
   a {
     color: $atelier-color-01;
@@ -19,6 +31,7 @@
     font-size: $badge-size;
     text-decoration: none;
   }
+
 }
 
 // .navbar-atelier-sections a {
