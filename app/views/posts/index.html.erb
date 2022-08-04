@@ -1,12 +1,5 @@
 <%= render "shared/navbar" %>
 <%= render "shared/footer" %>
-<div class="content">
-  <div class="content-grid">
-    <% @posts.each do |post| %>
-      <%= render "shared/card", post: post %>
-    <% end %>
-  </div>
-</div>
 <div class="categories-bar">
   <% categories = Category.all %>
   <% categories.each do |category| %>
@@ -14,4 +7,11 @@
       <%= link_to "#{category.tag.capitalize}", about_path(params[:tag] = category.id) %>
     </div>
   <% end %>
+</div>
+<div class="content">
+  <div class="content-grid">
+    <% @posts.each do |post| %>
+      <%= render "shared/card", post: post %>
+    <% end %>
+  </div>
 </div>
