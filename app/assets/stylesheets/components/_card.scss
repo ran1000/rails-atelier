@@ -3,9 +3,17 @@
   min-width: 100px;
   height: 600px;
   overflow: hidden;
+
+  h1 {
+    font-family: $header-font;
+    font-size: $button-size ;
+    padding-left: 8px;
+    padding-top: 8px;
+  }
 }
 
 .post-card-image {
-  height: 80%;
+  width: 100%;
+  height: 90%;
   object-fit: cover;
 }

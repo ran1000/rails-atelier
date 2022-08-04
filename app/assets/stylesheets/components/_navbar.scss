@@ -8,7 +8,8 @@
   margin: $margin-size;
 
   & h1 {
-    font-size: 1.6rem;
+    font-size: $header-size;
+    font-family: $header-font;
     margin: 0px 0px;
   }
 }
