@@ -1,5 +1,16 @@
 // Import page-specific CSS files here.
-@import "home";
+
+/* Body // Content */
+.content {
+  /* border: 5px solid red; */
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 160px;
+  height: calc(100%-162px);
+  /* column-count: 2;
+  column-gap: 0px; */
+}
 
 .content-grid {
   top: 162px;
@@ -42,4 +53,11 @@
   .content-grid {
     grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
   }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0px 3px;
 }
