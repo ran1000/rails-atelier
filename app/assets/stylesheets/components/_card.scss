@@ -4,11 +4,18 @@
   height: 600px;
   overflow: hidden;
 
+  h1,
+  p {
+    padding-left: 8px;
+    padding-top: 16px;
+    font-family: $body-font;
+    font-size: $body-size ;
+
+  }
+
   h1 {
     font-family: $header-font;
     font-size: $button-size ;
-    padding-left: 8px;
-    padding-top: 8px;
   }
 }
 
