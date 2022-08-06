@@ -42,7 +42,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   # LINE added after minimal template
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://ran-atelier.herokuapp.com/', port: 3000 }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
