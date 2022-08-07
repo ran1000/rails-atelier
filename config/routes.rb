@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i[index show] do
     collection do
-      get :category
+      get 'posts/:tag', to: "posts#category", as: :category
     end
   end
-  get 'about/:tag', to: 'pages#about', as: :about
+  get 'about', to: 'pages#about', as: :about
 end
