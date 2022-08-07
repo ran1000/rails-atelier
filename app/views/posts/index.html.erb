@@ -4,8 +4,10 @@
   <% categories = Category.all %>
   <% categories.each do |category| %>
     <div class="categories-badge">
-      <a><%= category.tag.downcase %></a>
-      <%# <%= link_to "##{category.tag.downcase}", about_path(params[:tag] = category.id) %>
+      <%# <a> %>
+        <%# <%= category.tag.downcase %>
+      <%# </a> %>
+      <%= link_to "##{category.tag.downcase}", about_path(params[:tag] = category.id) %>
     </div>
   <% end %>
 </div>
