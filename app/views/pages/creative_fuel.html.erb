@@ -1,0 +1,8 @@
+<h1>Creative Fuel</h1>
+<div class="content">
+  <div class="content-grid">
+    <% @posts.each do |post| %>
+      <%= render "shared/card", post: post %>
+    <% end %>
+  </div>
+</div>

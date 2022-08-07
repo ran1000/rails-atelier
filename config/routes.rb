@@ -8,5 +8,7 @@ Rails.application.routes.draw do
       get 'posts/:tag', to: "posts#category", as: 'category'
     end
   end
+
+  get 'creativefuel', to: 'pages#creative_fuel', as: "creative_fuel"
   get 'about', to: 'pages#about', as: :about
 end
