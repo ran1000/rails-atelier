@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index show category]
   before_action :find_post, only: :show
 
   def index
@@ -10,6 +10,8 @@ class PostsController < ApplicationController
   end
 
   def category
+    @category = Category.find_by(tag: params[:tag])
+    @posts = @category.posts
   end
 
   private

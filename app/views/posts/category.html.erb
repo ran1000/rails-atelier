@@ -1,1 +1,9 @@
-<h1>Category</h1>
+<h1><%= params[:tag] %></h1>
+<%= link_to "Back", :back %>
+<div class="content">
+  <div class="content-grid">
+    <% @posts.each do |post| %>
+      <%= render "shared/card", post: post %>
+    <% end %>
+  </div>
+</div>
