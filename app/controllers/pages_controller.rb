@@ -22,7 +22,7 @@ class PagesController < ApplicationController
     @posts = []
     @categories.each do |category|
       category.posts.each do |category_post|
-        @posts << category_post
+        @posts << category_post unless @posts.include?(category_post)
       end
     end
   end
