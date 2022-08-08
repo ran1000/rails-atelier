@@ -13,7 +13,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="root">
+      <%= yield %>
+    </div>
     <%= render "shared/flashes" %>
+    <%# <%= javascript_pack_tag 'react_test' %>
   </body>
 </html>

@@ -80,3 +80,5 @@ gem "rails_admin", "~> 3.0.0"
 
 gem "cloudinary"
 gem "devise"
+
+gem "webpacker", "~> 5.4.3"
