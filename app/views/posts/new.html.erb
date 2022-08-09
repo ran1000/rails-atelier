@@ -1,1 +1,7 @@
-<h2>ADD A NeW POST</h2>
+<h2>new post</h2>
+<%= simple_form_for(@post, data: { turbo: :false }) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :text %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.button :submit, "Create new Post"%>
+<% end %>
