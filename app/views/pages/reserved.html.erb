@@ -1,6 +1,8 @@
 <h2>reserved area</h2>
-
-<%= link_to "+ create new post", new_path %>
+<div class="d-flex justify-content-between">
+  <%= link_to "+ create new post", new_post_path %>
+  <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete} %>
+</div>
 <hr>
 <h2>current posts</h2>
 <div class="content">
