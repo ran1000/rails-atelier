@@ -9,6 +9,15 @@ class PostsController < ApplicationController
   def show
   end
 
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+    @post.save!
+  end
+
   def category
     @category = Category.find_by(tag: params[:tag])
     @posts = @category.posts
@@ -18,5 +27,9 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text, :photos)
   end
 end
