@@ -13,6 +13,10 @@ class PagesController < ApplicationController
     # end
   end
 
+  def reserved
+    @posts = Post.all
+  end
+
   def creative_fuel
     tags = %w[Places Façades Inspirations]
     @categories = []

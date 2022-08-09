@@ -1,0 +1,12 @@
+<h2>reserved area</h2>
+
+<%= link_to "+ create new post", new_path %>
+<hr>
+<h2>current posts</h2>
+<div class="content">
+  <div class="content-grid">
+    <% @posts.each do |post| %>
+      <%= render "shared/card", post: post %>
+    <% end %>
+  </div>
+</div>

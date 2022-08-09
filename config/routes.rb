@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get 'creativefuel', to: 'pages#creative_fuel', as: "creative_fuel"
   get 'about', to: 'pages#about', as: :about
+  get 'reserved-area', to: 'pages#reserved', as: :reserved
 end
