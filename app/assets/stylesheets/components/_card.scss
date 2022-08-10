@@ -3,11 +3,12 @@
   min-width: 100px;
   height: 600px;
   overflow: hidden;
+  text-decoration: none;
+  color: black;
 
   h1,
   p {
-    padding-left: 8px;
-    padding-top: 16px;
+    padding: 16px 16px 16px 16px;
     font-family: $body-font;
     font-size: $body-size ;
 
@@ -17,6 +18,11 @@
     font-family: $header-font;
     font-size: $button-size ;
   }
+}
+
+.post-card:hover {
+  opacity: 0.95;
+  color: rgba(0, 0, 0, 0.732);
 }
 
 .post-card-image {

@@ -1,9 +1,11 @@
 <%= render "shared/navbar" %>
 <%= render "shared/categories" %>
-<% unless @post.photos.nil? %>
-  <% cover_photo = @post.photos[0] %>
-  <%= cl_image_tag cover_photo.key, width: 400, height: 300, crop: :fill, class: %i[img-show] %>
-<% end  %>
-<DIV class="floating-title">
-  <h2><%= @post.title %></h2>
-</DIV>
+<div class="show-content">
+  <% unless @post.photos.nil? %>
+    <% cover_photo = @post.photos[0] %>
+    <%= cl_image_tag cover_photo.key, width: 400, height: 300, crop: :fill, class: %i[show-img] %>
+  <% end  %>
+  <div class="show-floating-title">
+    <h4><%= @post.title %></h4>
+  </div>
+</div>
