@@ -1,5 +1,7 @@
 <div class="navbar-atelier">
-  <h1>RAN1000</h1>
+  <%= link_to home_path, {class: "website-title"} do %>
+    <h1>Rantelier</h1>
+  <% end %>
   <div class="navbar-atelier-sections">
     <%= link_to "+ projects", category_posts_path("Projects") %>
     <%= link_to "+ creative fuel", creative_fuel_path %>

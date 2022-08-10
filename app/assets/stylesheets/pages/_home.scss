@@ -1,1 +1,9 @@
 // Specific CSS for your home-page
+.website-title {
+  text-decoration: none;
+  color: black;
+}
+
+.website-title:hover {
+  color: rgb(37, 37, 37);
+}

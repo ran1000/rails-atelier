@@ -1,13 +1,6 @@
 <%= render "shared/navbar" %>
 <%= render "shared/footer" %>
-<div class="categories-bar">
-  <% categories = Category.all %>
-  <% categories.each do |category| %>
-    <div class="categories-badge">
-      <%= link_to "##{category.tag.downcase}", category_posts_path(category.tag) %>
-    </div>
-  <% end %>
-</div>
+<%= render "shared/categories" %>
 <div class="content">
   <div class="content-grid">
     <% @posts.each do |post| %>
