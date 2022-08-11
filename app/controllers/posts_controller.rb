@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show category]
-  before_action :find_post, only: :show
+  before_action :find_post, only: %i[show edit patch]
 
   def index
     @posts = Post.all
@@ -20,6 +20,13 @@ class PostsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+  end
+
+  def patch
+    @post.update(params[:post])
   end
 
   def category

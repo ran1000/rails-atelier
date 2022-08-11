@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: "posts#index", as: :home
 
-  resources :posts, only: %i[index show new create] do
+  resources :posts, only: %i[index show new create edit patch] do
     collection do
       get 'posts/:tag', to: "posts#category", as: 'category'
     end

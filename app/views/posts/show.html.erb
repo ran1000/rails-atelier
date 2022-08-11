@@ -6,5 +6,8 @@
   <% end  %>
   <div class="show-floating-title">
     <h4><%= @post.title %></h4>
+    <% if current_user %>
+      <%= link_to "edit post", edit_post_path, class:"btn button-white" %>
+    <% end %>
   </div>
 </div>
