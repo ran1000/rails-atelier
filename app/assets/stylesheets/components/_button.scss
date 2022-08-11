@@ -1,0 +1,21 @@
+.button-black {
+  height: 40px;
+  padding: auto 10px;
+  min-width: 120px;
+  border: $border-size solid black;
+  background-color: black;
+  color: white;
+  font-size: $body-font;
+  font-family: $header-font;
+  font-weight: 500;
+}
+
+.button-white {
+  height: 40px;
+  padding: auto 10px;
+  min-width: 120px;
+  border: $border-size solid black;
+  font-size: $body-font;
+  font-family: $header-font;
+  font-weight: 500;
+}
