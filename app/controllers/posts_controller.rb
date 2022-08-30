@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show category]
-  before_action :find_post, only: %i[show edit patch]
+  before_action :find_post, only: %i[show edit patch delete]
 
   def index
     @posts = Post.all
@@ -27,6 +27,11 @@ class PostsController < ApplicationController
 
   def patch
     @post.update(params[:post])
+  end
+
+  def delete
+    @post.destroy
+    redirect_to reserved_path, status: :see_other
   end
 
   def category
