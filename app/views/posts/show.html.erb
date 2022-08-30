@@ -9,5 +9,8 @@
     <% if current_user %>
       <%= link_to "edit post", edit_post_path, class:"btn button-white" %>
     <% end %>
+    <% if current_user %>
+      <%= link_to "delete post", post_path(@post), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn button-white" %>
+    <% end %>
   </div>
 </div>
