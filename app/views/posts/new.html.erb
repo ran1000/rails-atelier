@@ -2,6 +2,7 @@
   <h2>new post</h2>
   <%= f.input :title %>
   <%= f.input :text %>
+  <%= f.association :categories, label_method: :tag, as: :check_boxes, class: "cat-select" %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.button :submit, "create new post", class: "button-white mt-5" %>
 <% end %>
