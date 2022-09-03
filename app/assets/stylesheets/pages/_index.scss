@@ -78,7 +78,27 @@
   grid-row: 1 / span 2;
 }
 
-.post-card:nth-of-type(2) {
+.post-card:nth-of-type(4) {
   grid-column: 4 / 4;
   grid-row: 1 / span 1;
+}
+
+.post-card:nth-of-type(5) {
+  grid-column: 1 / 1;
+  grid-row: 3 / span 1;
+}
+
+.post-card:nth-of-type(6) {
+  grid-column: 2 / 2;
+  grid-row: 2 / span 2;
+}
+
+.post-card:nth-of-type(7) {
+  grid-column: 3 / 3;
+  grid-row: 3 / span 1;
+}
+
+.post-card:nth-of-type(8) {
+  grid-column: 4 / 4;
+  grid-row: 2 / span 2;
 }
