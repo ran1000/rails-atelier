@@ -6,6 +6,8 @@
     </div>
   <% end %>
   <% if current_user && params[:controller] == "pages" %>
-    <%= link_to "new category", home_path %>
+    <div class="categories-badge">
+      <%= link_to "+ new category", home_path %>
+    </div>
   <% end %>
 </div>

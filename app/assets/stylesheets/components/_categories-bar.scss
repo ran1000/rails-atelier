@@ -31,7 +31,10 @@
     font-size: $badge-size;
     text-decoration: none;
   }
+}
 
+.categories-badge:last-of-type {
+  flex-grow: 2;
 }
 
 // .navbar-atelier-sections a {
