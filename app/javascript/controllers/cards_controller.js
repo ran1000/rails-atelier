@@ -6,6 +6,6 @@ export default class extends Controller {
   }
 
   filter(event) {
-    console.log(this.element.innerHTML)
+    console.log(this.element.innerText)
   }
 }
