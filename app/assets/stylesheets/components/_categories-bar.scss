@@ -1,5 +1,5 @@
 .categories-bar {
-  // height: 50px;
+  height: 36px;
   // border: $border-size solid black;
   display: flex;
   flex-direction: row;
@@ -22,7 +22,9 @@
   }
 
   border: $border-size solid $atelier-color-01;
-  padding: 2px 4px;
+  height: 100%;
+  // padding-left: 4px;
+  // padding-right: 4px;
   margin-right: $margin-size;
 
   a {
@@ -30,11 +32,13 @@
     font-family: $body-font;
     font-size: $badge-size;
     text-decoration: none;
+    margin: auto 5px;
   }
 }
 
 .categories-badge:last-of-type {
   flex-grow: 2;
+  height: 100%;
 }
 
 // .navbar-atelier-sections a {
