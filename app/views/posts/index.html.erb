@@ -1,10 +1,14 @@
 <%= render "shared/navbar" %>
 <%= render "shared/footer" %>
-<%= render "shared/categories" %>
-<div class="content">
-  <div class="content-grid">
-    <% @posts.each do |post| %>
-      <%= render "shared/card", post: post %>
-    <% end %>
+<div
+  <%# data-controller="cards" %>
+>
+  <%= render "shared/categories" %>
+  <div class="content">
+    <div class="content-grid">
+      <% @posts.each do |post| %>
+        <%= render "shared/card", post: post %>
+      <% end %>
+    </div>
   </div>
 </div>

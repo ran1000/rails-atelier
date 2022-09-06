@@ -1,8 +1,14 @@
 <div class="categories-bar">
   <% categories = Category.all %>
   <% categories.each do |category| %>
-    <div class="categories-badge">
-      <%= link_to "##{category.tag.downcase}", category_posts_path(category.tag) %>
+      <div class="categories-badge"
+        data-controller="cards"
+        data-action="click->cards#filter"
+      >
+      <p>
+        <%= category.tag.downcase %>
+      </p>
+      <%# <%= link_to "##{category.tag.downcase}", category_posts_path(category.tag) %>
     </div>
   <% end %>
   <% if current_user && params[:controller] == "pages" %>
