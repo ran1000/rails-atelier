@@ -1,11 +1,12 @@
 .navbar-atelier {
   height: 50px;
+  width: 100%;
   border: $border-size solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px;
-  margin: $margin-size;
+  margin-bottom: $margin-size;
 
   & h1 {
     font-size: $header-size;
@@ -22,6 +23,8 @@
 }
 
 .navbar-atelier-sections a {
+  display: inline-block;
+  padding-left: 20px;
   text-decoration: none;
   color: black;
 }

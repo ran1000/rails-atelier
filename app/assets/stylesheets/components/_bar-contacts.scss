@@ -1,11 +1,12 @@
-.footer-atelier {
+.bar-contacts-atelier {
   height: 50px;
+  width: 100%;
   border: $border-size solid black;
   padding: 0px 10px;
-  margin: $margin-size;
+  margin-bottom: $margin-size;
 }
 
-.footer-atelier-sections {
+.bar-contacts-atelier-sections {
   height: 100%;
   align-items: center;
   display: flex;
@@ -13,11 +14,11 @@
   margin: 0px 0px 0px 15px;
 }
 
-.footer-atelier-sections a {
+.bar-contacts-atelier-sections a {
   text-decoration: none;
   color: black;
 }
 
-.footer-atelier-sections p {
+.bar-contacts-atelier-sections p {
   margin: 0px 0px 0px 15px;
 }

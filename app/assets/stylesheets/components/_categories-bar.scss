@@ -1,19 +1,23 @@
 .categories-bar {
   height: 36px;
-  // border: $border-size solid black;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  // padding: 0px 10px;
-  margin: $margin-size $margin-size 0px $margin-size;
+  margin-bottom: $margin-size;
+  overflow-y: scroll;
 }
 
 .categories-badge {
   background-color: white;
+  border: $border-size solid $atelier-color-01;
+  height: 100%;
+  margin-right: $margin-size;
+  display: flex;
+  align-items: center;
 
   &:hover {
-    background-color: rgb(249, 255, 168);
+    background-color: $atelier-color-random;
   }
 
   &:active {
@@ -21,31 +25,18 @@
     color: white;
   }
 
-  border: $border-size solid $atelier-color-01;
-  height: 100%;
-  // padding-left: 4px;
-  // padding-right: 4px;
-  margin-right: $margin-size;
-
   a {
+    white-space: nowrap;
     color: $atelier-color-01;
     font-family: $body-font;
     font-size: $badge-size;
     text-decoration: none;
-    margin: auto 5px;
+    padding: 5px;
   }
 }
 
 .categories-badge:last-of-type {
   flex-grow: 2;
   height: 100%;
+  margin-right: 0;
 }
-
-// .navbar-atelier-sections a {
-//   text-decoration: none;
-//   color: black;
-// }
-
-// .navbar-atelier-sections p {
-//   margin: 0px 0px 0px 15px;
-// }
