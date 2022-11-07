@@ -32,3 +32,16 @@
 .navbar-atelier-sections p {
   margin: 0px 0px 0px 15px;
 }
+
+.navbar-atelier {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-atelier .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-atelier .navbar-brand img {
+  width: 40px;
+}
