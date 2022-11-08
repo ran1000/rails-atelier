@@ -1,9 +1,9 @@
 <div class="categories-bar">
   <% categories = Category.all %>
   <% categories.each do |category| %>
-    <div class="categories-badge">
-      <%= link_to "##{category.tag.downcase}", category_posts_path(category.tag) %>
-    </div>
+    <%= content_tag :div, class: "categories-badge", "data-action" => "click->category-filter#updateItems"  do %>
+      <p><%= "##{category.tag.downcase}" %></p>
+    <% end %>
   <% end %>
   <% if current_user && params[:controller] == "pages" %>
     <div class="categories-badge">

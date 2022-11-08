@@ -1,4 +1,4 @@
-<%= link_to post_path(id: post), html_options = { style: "#{"background-color: blue" if post.title === "Spotaloo" }", class: "post-card item", "data-grid-target" => "items"  } do %>
+<%= link_to post_path(id: post), html_options = { style: "#{"background-color: blue" if post.title === "Spotaloo" }", class: "post-card item", "data-grid-target" => "items", "data-category-filter-target" => "items"  } do %>
     <div class="content">
       <% if post.photos.attached? %>
         <%= cl_image_tag post.photos[0].key, width: 400, height: 600, crop: :fill, class: "post-card-image" %>

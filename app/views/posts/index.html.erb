@@ -1,5 +1,6 @@
 <%= render "shared/navbar" %>
 <%= render "shared/barcontacts" %>
+<div data-controller="category-filter">
 <%= render "shared/categories" %>
 <div class="content">
   <div class="grid" data-controller="grid" data-action="load@window->grid#updateGrid resize@window->grid#updateGrid">
@@ -7,4 +8,5 @@
       <%= render "shared/card", post: post %>
     <% end %>
   </div>
+</div>
 </div>

@@ -25,13 +25,14 @@
     color: white;
   }
 
-  a {
+  p {
     white-space: nowrap;
     color: $atelier-color-01;
     font-family: $body-font;
     font-size: $badge-size;
     text-decoration: none;
     padding: 5px;
+    margin: auto;
   }
 }
 

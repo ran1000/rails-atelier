@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import CategoryFilterController from "./category_filter_controller"
+application.register("category-filter", CategoryFilterController)
+
 import GridController from "./grid_controller"
 application.register("grid", GridController)
 
