@@ -1,7 +1,7 @@
 <div class="categories-bar">
   <% categories = Category.all %>
   <% categories.each do |category| %>
-    <%= content_tag :div, class: "categories-badge", "data-action" => "click->category-filter#updateItems"  do %>
+    <%= content_tag :div, class: "categories-badge", "data-action" => "click->category-filter#updateItems", "data-category" => category.tag do %>
       <p><%= "##{category.tag.downcase}" %></p>
     <% end %>
   <% end %>
