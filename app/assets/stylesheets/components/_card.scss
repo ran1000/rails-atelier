@@ -71,6 +71,7 @@
 
 // Extra large devices (large desktops, until 1200px)
 @media (max-width: 1200px) {
+
   .grid-item {
     width: 33%;
   }
@@ -78,6 +79,7 @@
 
 // Large devices (desktops, until 992px)
 @media (max-width: 992px) {
+
   .grid-item {
     width: 49.8%;
   }
@@ -85,6 +87,7 @@
 
 // Small devices (landscape phones, until 576px)
 @media (max-width: 576px) {
+
   .grid-item {
     width: 100%;
   }
