@@ -1,7 +1,9 @@
-<%= link_to post_path(id: post), { style: "#{"background-color: blue" if post.title === "Spotaloo" }", class: "post-card grid-item" } do %>
-    <% if post.photos.attached? %>
-      <%= cl_image_tag post.photos[0].key, width: 400, height: 600, crop: :fill, class: "post-card-image" %>
-    <% end %>
-    <h1><%= post.title %></h1>
-    <p><%= post.text %></p>
+<%= link_to post_path(id: post), { style: "#{"background-color: blue" if post.title === "Spotaloo" }", class: "post-card item" } do %>
+    <div class="content">
+      <% if post.photos.attached? %>
+        <%= cl_image_tag post.photos[0].key, width: 400, height: 600, crop: :fill, class: "post-card-image" %>
+      <% end %>
+      <h1><%= post.title %></h1>
+      <p><%= post.text %></p>
+    </div>
 <% end %>
