@@ -2,7 +2,7 @@
 <%= render "shared/barcontacts" %>
 <%= render "shared/categories" %>
 <div class="content">
-  <div class="grid">
+  <div class="grid" data-controller="grid" data-action="load@window->grid#updateGrid resize@window->grid#updateGrid">
     <% @posts.each do |post| %>
       <%= render "shared/card", post: post %>
     <% end %>
