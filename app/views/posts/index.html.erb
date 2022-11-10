@@ -3,7 +3,7 @@
 <div data-controller="category-filter">
 <%= render "shared/categories" %>
 <div class="content">
-  <div class="grid" data-controller="grid" data-action="load@window->grid#updateGrid resize@window->grid#updateGrid">
+  <div class="grid" data-controller="grid" data-action="load@window->grid#updateGrid resize@window->grid#updateGrid" data-category-filter-target="children">
     <% @posts.each do |post| %>
       <%= render "shared/card", post: post %>
     <% end %>
